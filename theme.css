@@ -4,6 +4,37 @@ body {
 .spacer {
   height: 50px; }
 
+/* Radio */
+
+/* What about the first theme of this example : http://fronteed.com/iCheck/ ? */
+.radio
+{
+    font-family: "Source Sans Pro" sans-serif;
+    font-size: 13px;
+}
+
+.checkbox
+{
+    font-family: "Source Sans Pro" sans-serif;
+    font-size: 13px;
+}
+
+.radio-checked{
+
+}
+
+.radio-unchecked{
+
+}
+
+.checkbox-checked{
+
+}
+
+.checkbox-unchecked{
+
+}
+
 /* Buttons */
 .btn {
   font-family: "Source Sans Pro" sans-serif;
@@ -11,14 +42,14 @@ body {
   background: #ecf0f1;
   border: 1px solid #bdc3c7;
   height: 25px;
-  border-radius: 2px; }
+  }
   .btn:hover {
     background: #cfd9db; }
   .btn:active {
     background: #b1c2c6; }
 
 .btn-rounded {
-  border-radius: 35px; }
+  border-radius: 8px; }
 
 .btn-small {
   height: 20px;
@@ -29,7 +60,7 @@ body {
   font-size: 10px; }
 
 .btn-default {
-  color: #ecf0f1;
+  color: white;
   background: #3498db;
   border: 1px solid #2980b9; }
   .btn-default:hover {
@@ -38,12 +69,12 @@ body {
     background: #196090; }
 
 .btn-disabled {
-  color: #888888;
-  background: white; }
+  color: #B8B8B8;
+  background: #f5f5f5; }
   .btn-disabled:hover {
-    background: white; }
+    background: #f5f5f5; }
   .btn-disabled:active {
-    background: white; }
+    background: #f5f5f5; }
 
 .btn-default-disabled {
   color: white;
@@ -60,24 +91,33 @@ body {
   font-family: "Source Sans Pro" sans-serif;
   font-size: 13px;
   border: 1px solid #bdc3c7;
-  background: #ecf0f1; }
+  background: #ecf0f1;
+}
 
 .seg-left {
   border-top-left-radius: 2px;
   border-bottom-left-radius: 2px;
-  margin-right: 0; }
+  margin-right: 0;
+}
 
 .seg-middle {
-  margin: 0 0; }
+  margin: 0 0;
+  position: relative;
+  left: -5px;
+}
 
 .seg-right {
   border-top-right-radius: 2px;
-  border-bottom-right-radius: 2px; }
+  border-bottom-right-radius: 2px;
+}
 
 .seg-active {
   background: #3498db;
-  color: #ecf0f1;
-  border: #2980b9; }
+  color: white;
+  border: #2980b9;
+  position: relative;
+  left: -9px;
+}
 
 /* Sliders */
 .slider-track {
@@ -125,12 +165,11 @@ body {
   font-size: 13px;
   height: 25px;
   border: 1px solid #bdc3c7;
-  border-radius: 2px;
   padding-left: 2px;
   padding-right: 2px; }
 
 .input-focus-ring {
-  box-shadow: 0px 0px 5px 3px #5faee3; }
+  border: 1px solid #2980b9; }
 
 .input-stepper, .input-dropdown {
   width: 160px;
@@ -139,27 +178,48 @@ body {
 
 .stepper-up, .stepper-down {
   width: 19px;
-  height: 12px;
+  height: 13px;
   font-size: 8px;
   text-align: center;
   color: #ecf0f1;
   background: #3498db;
   border: 1px solid #2980b9;
   position: relative;
-  top: -27px;
-  left: 163px; }
+  top: -29px;
+  left: 165px; }
 
 .stepper-up {
   vertical-align: bottom;
-  border-top-right-radius: 2px;
+  border-top-right-radius: 0px;
   margin-bottom: 0; }
 
 .stepper-down {
   vertical-align: top;
-  border-bottom-right-radius: 2px; }
+  border-bottom-right-radius: 0px;
+  top: -30px;}
+
+.stepper-up-value {
+    width: 19px;
+    height: 12px;
+    font-size: 8px;
+    text-align: center;
+    color: white;
+    position: relative;
+    top: -55px;
+    left: 166px; }
+
+.stepper-down-value {
+    width: 19px;
+    height: 12px;
+    font-size: 8px;
+    text-align: center;
+    color: white;
+    position: relative;
+    top: -54px;
+    left: 166px; }
 
 .input-rounded {
-  border-radius: 20px;
+  border-radius: 8px;
   padding: 0 5px; }
 
 .dropdown-down {
@@ -170,12 +230,23 @@ body {
   background: #3498db;
   color: #ecf0f1;
   border: 1px solid #2980b9;
-  border-top-right-radius: 2px;
-  border-bottom-right-radius: 2px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
   /* Demo positioning */
   position: relative;
-  top: -28px;
-  left: 163px; }
+  top: -29px;
+  left: 165px; }
+
+.dropdown-down-value {
+    width: 19px;
+    height: 27px;
+    text-align: center;
+    content: "\9660";
+    color: white;
+    /* Demo positioning */
+    position: relative;
+    top: -50px;
+    left: 166px; }
 
 /* Toolbar */
 .toolbar {
@@ -227,7 +298,7 @@ body {
     .menubar .menubar-item-active .title {
       font-weight: 600;
       font-size: 13px;
-      color: #ecf0f1; }
+      color: white; }
 
 .menu {
   position: relative;
@@ -256,7 +327,7 @@ body {
     background: #3498db;
     border-top: 1px solid #2980b9; }
     .menu .menu-item-active .menu-item-title, .menu .menu-item-active .menu-item-shortcut {
-      color: #ecf0f1; }
+      color: white; }
 
 /* Tables */
 .table {
